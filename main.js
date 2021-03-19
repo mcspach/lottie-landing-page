@@ -13,17 +13,25 @@ const app = new Vue({
             const clickedID = myEvent.target.id;
             if (clickedID !== this.activeID) {
                 this.activeID = clickedID;
-                console.log(this.lottie, this.activeID);
+                // console.log(this.lottie, this.activeID);
+                const allButtons = document.querySelectorAll('.main-btn');
+                allButtons.forEach(button => {
+                    if (button.classList.contains('active-btn')) { 
+                    button.classList.remove('active-btn');
+                    }
+                });
+                myEvent.currentTarget.classList.add('active-btn');
+                console.log(myEvent.currentTarget.classList);
             }
         }
     },
     computed: {
         lottie() {
-            if (this.activeID === 'do-btn') { return 'https://assets3.lottiefiles.com/packages/lf20_gzkwmcoz.json' }
+            if (this.activeID === 'do-btn') { return 'https://assets5.lottiefiles.com/packages/lf20_ptplezpy.json' }
             if (this.activeID === 'who-btn') { return 'https://assets4.lottiefiles.com/packages/lf20_k0bemiww.json' }
             if (this.activeID === 'start-btn') { return 'https://assets4.lottiefiles.com/packages/lf20_k0bemiww.json' }
             else { return 'https://assets4.lottiefiles.com/packages/lf20_k0bemiww.json' }
-        }
+        },
     }
 });
 
@@ -36,7 +44,8 @@ const app = new Vue({
     // });
     // const handleClick = (id) => {
     //     console.log(id);
-        //display new Lottie}
+    // }
+        // display new Lottie}
   //play lottie or animation to hide previous shown content
   //add active class
   //play lottie animation
