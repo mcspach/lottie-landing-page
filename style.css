@@ -14,11 +14,30 @@ body {
     height: 100%;
     margin: 0;
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
     background-color: black;
 }
 
-img {
-    width: 60%;
+.centerpeice {
+    height: 75%;
+    width: 80%;
+}
+
+.button-line {
+    height: 25%;
+    width: 100%;
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.main-btn {
+    background-color: black;
+    padding: 20px;
+    border: 2px solid lightblue;
+    border-radius: 20px;
+    color: lightblue;
 }
