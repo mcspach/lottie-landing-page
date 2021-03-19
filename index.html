@@ -17,26 +17,21 @@
     <div id="app">
 
         <div class="centerpeice">
-            <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_k0bemiww.json" background="transparent" speed=".75" style="width: 100%" autoplay></lottie-player>
+            <lottie-player :src=lottie background="transparent" speed=".75" style="width: 100%" autoplay></lottie-player>
         </div>
 
 
         <div v-show="true" class="button-line">
 
-            <button class="main-btn">What We Do</button>
-            <button class="main-btn">Who We Are</button>
-            <button class="main-btn">Get Started</button>
+            <button @click="renderCenter($event)" id="do-btn" class="main-btn">What We Do</button>
+            <button @click="renderCenter($event)" id="who-btn" class="main-btn">Who We Are</button>
+            <button @click="renderCenter($event)" id="start-btn" class="main-btn">Get Started</button>
         
         </div>
         
 
     </div> 
-    <!-- scrollpoint  -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-   <script src="scrollpoint.jquery.js"></script>
-    
+
     <!-- lottieplayer  -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
