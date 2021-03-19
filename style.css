@@ -32,8 +32,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    animation-name: fadeUp;
-    animation-duration: 3s;
+    overflow: hidden;
 }
 
 @keyframes fadeUp {
@@ -47,6 +46,8 @@ body {
     border: 2px solid lightblue;
     border-radius: 20px;
     color: lightblue;
+    animation-name: fadeUp;
+    animation-duration: 3s;
 }
 
 .main-btn:hover {
@@ -59,6 +60,14 @@ body {
     --animate-duration: 1000;
     --animate-delay: 1500;
   }
+
+@media (max-width: 600px) {
+    .main-btn {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+}
 
 
 
