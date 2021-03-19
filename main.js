@@ -3,12 +3,14 @@ const app = new Vue({
     el: "#app",
     data: {
         brand: 'Impact',
-        lottie: 'https://lottiefiles.com/share/lx7wyczv'
+        lottie: 'https://lottiefiles.com/share/lx7wyczv',
+        show: true
     }
 })
 
-//animate buttons after interval
+
 //listen for button click
-//play lottie animation
-//reveal that div
-//listen for button click
+  //play lottie or animation to hide previous shown content
+  //add active class
+  //play lottie animation
+  //reveal that div or play that Lottie
