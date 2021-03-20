@@ -17,21 +17,23 @@
     <div id="app">
 
         <div class="centerpeice">
-            <!-- <lottie-player v-bind:src="lottie" background="transparent" speed=".75" style="width: 100%" autoplay></lottie-player> -->
-            <img :src="lottie" alt="">
+            <lottie-player v-if="activeID == `do-btn`" :key="activeID" src="https://assets4.lottiefiles.com/private_files/lf30_na1jgbny.json" background="transparent" speed=".75" style="width: 100%" autoplay></lottie-player>
+            <lottie-player v-else-if="activeID == `do-btn`" :key="activeID" src="https://assets9.lottiefiles.com/packages/lf20_k0bemiww.json" background="transparent" speed=".75" style="width: 100%" autoplay></lottie-player>
+            <lottie-player v-else-if="activeID == `do-btn`" :key="activeID" src="https://assets9.lottiefiles.com/packages/lf20_k0bemiww.json" background="transparent" speed=".75" style="width: 100%" autoplay></lottie-player>
+            <lottie-player v-else :key="activeID" src="https://assets9.lottiefiles.com/packages/lf20_k0bemiww.json" background="transparent" speed=".75" style="width: 100%" autoplay></lottie-player>
         </div>
 
 
-        <div v-show="true" class="button-line">
+        <div class="button-line">
 
             <button @click="renderCenter($event)" id="do-btn" class="main-btn">What We Do</button>
             <button @click="renderCenter($event)" id="who-btn" class="main-btn">Who We Are</button>
             <button @click="renderCenter($event)" id="start-btn" class="main-btn">Get Started</button>
         
         </div>
-        
 
     </div> 
+</body>
 
     <!-- lottieplayer  -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -39,5 +41,4 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="main.js"></script>
 
-</body>
 </html>
